@@ -3,6 +3,12 @@ import { CommentItem } from './CommentItem'
 import { ListGroup } from 'react-bootstrap';
 
 const Comments = ({ comments }) => {
+
+    if (comments === null)
+        return <div>
+            <h2>Sem Comentários</h2>
+        </div>
+
     const keys = Object.keys(comments)
     return (
         <div>

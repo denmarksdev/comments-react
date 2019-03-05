@@ -8,14 +8,18 @@ import {
     FormControl,
     Button,
 } from 'react-bootstrap';
-import '../components/form.css';
 
 const loginStyle = {
     marginBottom: '30px'
 }
-
 const buttonStyle = {
     marginRight: 10
+}
+const inputEmailStyle = {
+    maxWidth: '500px'
+}
+const inputPasswdStyle = {
+    maxWidth: '300px'
 }
 
 export default class SignUp extends React.Component {
@@ -43,17 +47,17 @@ export default class SignUp extends React.Component {
                 <h2>Criar conta</h2>
                 <Form method='POST' onSubmit={this.createAccount} >
 
-                    <FormGroup>
-                        <FormLabel>Usuário</FormLabel>
+                    <FormGroup style={ inputEmailStyle }>
+                        <FormLabel>Email</FormLabel>
                         <FormControl onChange={this.handleChange('email')} />
                     </FormGroup>
 
-                    <FormGroup >
+                    <FormGroup style={ inputPasswdStyle }>
                         <FormLabel>Senha</FormLabel>
                         <FormControl onChange={this.handleChange('passwd')} type='password' />
                     </FormGroup>
 
-                    <FormGroup >
+                    <FormGroup>
                         <Button type='submit' style={buttonStyle} >Cadastrar</Button>
                         <Button variant='success' onClick={() => this.props.changeScreen('login')} >Login</Button>
                     </FormGroup>

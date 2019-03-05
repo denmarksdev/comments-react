@@ -15,6 +15,12 @@ const loginStyle = {
 const buttonStyle  ={
     marginRight:10
 }
+const inputEmailStyle = {
+    maxWidth: '500px'
+}
+const inputPasswdStyle = {
+    maxWidth: '300px'
+}
 
 export default class Login extends React.Component {
 
@@ -40,11 +46,11 @@ export default class Login extends React.Component {
             <Container style={loginStyle} >
                 <h2>Login</h2>
                 <Form method='POST' onSubmit={this.login} >
-                    <FormGroup>
-                        <FormLabel>Usuário</FormLabel>
+                    <FormGroup style={ inputEmailStyle } >
+                        <FormLabel>Email</FormLabel>
                         <FormControl onChange={this.handleChange('email')} />
                     </FormGroup>
-                    <FormGroup>
+                    <FormGroup style={ inputPasswdStyle } >
                         <FormLabel>Senha</FormLabel>
                         <FormControl onChange={this.handleChange('passwd')} type='password' />
                     </FormGroup>

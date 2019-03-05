@@ -8,7 +8,6 @@ import SignUp from  './components/SignUp'
 import Dialog from './components/Dialog';
 import User from './components/User';
 
-
 import {
   Container,
   ProgressBar,
@@ -29,7 +28,7 @@ class App extends Component {
     msgErro: '',
     isAuth: false,
     user: {},
-    userScreen: 'login' // signup
+    userScreen: 'login', // signup
   }
 
   onSendNewComment = (comment) => {
@@ -44,6 +43,7 @@ class App extends Component {
   }
 
   componentDidMount() {
+
     const { auth } = this.props
 
     this.setState({ isLoading: true })
@@ -91,7 +91,6 @@ class App extends Component {
   }
 
   handleClose = () => {
-    console.log('close')
     this.setState({ showDialog: false, msgErro: '' });
   }
 
@@ -114,8 +113,6 @@ class App extends Component {
       user,
       userScreen,
     } = this.state
-
-    console.log(user.email)
 
     return (
       <Container style={{ marginTop: '5em', border: 'solid 1px #007bff', borderRadius: '10px', padding: '10px' }} >
