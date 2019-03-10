@@ -24,7 +24,7 @@ Aplicação em que o usuário pode fazer um comentário se estiver logado.
 
  ![](https://github.com/denmarksdev/comments-react/blob/master/screenshot.JPG?raw=true "Comments React")
   
- # Referëncias
+ # Referências
 
 - [Tulio - ***DevPleno**](https://www.devpleno.com/)
 - [ Firebase ](https://firebase.google.com/docs/web/setup?hl=pt-br)
